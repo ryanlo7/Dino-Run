@@ -1,0 +1,1581 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\vga640x480.v" into library work
+Parsing module <vga640x480>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\seven_segment.v" into library work
+Parsing module <seven_segment>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\obstacles.v" into library work
+Parsing module <obstacle>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\lfsr.v" into library work
+Parsing module <lfsr>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\enemy.v" into library work
+Parsing module <enemy>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\dinofields.v" into library work
+Parsing module <dinofields>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\debouncer.v" into library work
+Parsing module <debouncer>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\counter.v" into library work
+Parsing module <counter>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\collisions.v" into library work
+Parsing module <collisions>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\clouds.v" into library work
+Parsing module <clouds>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\clockdiv.v" into library work
+Parsing module <clockdiv>.
+Analyzing Verilog file "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" into library work
+Parsing module <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <main>.
+WARNING:HDLCompiler:1127 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 67: Assignment to dp ignored, since the identifier is never used
+
+Elaborating module <debouncer>.
+
+Elaborating module <clockdiv>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\clockdiv.v" Line 52: Result of 28-bit expression is truncated to fit in 27-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\clockdiv.v" Line 53: Result of 32-bit expression is truncated to fit in 31-bit target.
+
+Elaborating module <counter>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\counter.v" Line 49: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\counter.v" Line 53: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\counter.v" Line 58: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\counter.v" Line 69: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <dinofields>.
+WARNING:HDLCompiler:872 - "C:\Users\152\Downloads\NERP_demo\dinofields.v" Line 15: Using initial value of dino_h_reg since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\dinofields.v" Line 42: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\dinofields.v" Line 47: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 120: Assignment to dino_vvel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 121: Assignment to jump_state ignored, since the identifier is never used
+
+Elaborating module <lfsr>.
+WARNING:HDLCompiler:189 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 132: Size mismatch in connection of port <enable>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 139: Size mismatch in connection of port <enable>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 145: Assignment to obstacle2_time ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 146: Size mismatch in connection of port <enable>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+Elaborating module <obstacle>.
+WARNING:HDLCompiler:872 - "C:\Users\152\Downloads\NERP_demo\obstacles.v" Line 20: Using initial value of obstacle_hvel_reg since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\obstacles.v" Line 43: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\obstacles.v" Line 44: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\obstacles.v" Line 50: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\obstacles.v" Line 51: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\obstacles.v" Line 69: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\obstacles.v" Line 77: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\obstacles.v" Line 84: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 167: Assignment to obstacle_hvel ignored, since the identifier is never used
+
+Elaborating module <enemy>.
+WARNING:HDLCompiler:872 - "C:\Users\152\Downloads\NERP_demo\enemy.v" Line 102: Using initial value of obstacle_hvel_reg since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\enemy.v" Line 128: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\enemy.v" Line 135: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\enemy.v" Line 144: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\enemy.v" Line 149: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\enemy.v" Line 178: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 186: Assignment to enemy_hvel ignored, since the identifier is never used
+
+Elaborating module <collisions>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\collisions.v" Line 31: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\collisions.v" Line 32: Result of 32-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <clouds>.
+WARNING:HDLCompiler:872 - "C:\Users\152\Downloads\NERP_demo\clouds.v" Line 16: Using initial value of cloud_hvel_reg since it is never assigned
+WARNING:HDLCompiler:1127 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" Line 219: Assignment to cloud_hvel ignored, since the identifier is never used
+
+Elaborating module <seven_segment>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\seven_segment.v" Line 98: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\152\Downloads\NERP_demo\seven_segment.v" Line 40: Net <blank_seg[7]> does not have a driver.
+
+Elaborating module <vga640x480>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\vga640x480.v" Line 88: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\vga640x480.v" Line 97: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\vga640x480.v" Line 109: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Downloads\NERP_demo\vga640x480.v" Line 110: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:Xst:2972 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" line 144. All outputs of instance <timing_chooser2> of block <lfsr> are unconnected in block <main>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <main>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v".
+INFO:Xst:3210 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" line 115: Output port <dino_vvel> of the instance <block1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" line 115: Output port <jump_state> of the instance <block1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" line 144: Output port <out> of the instance <timing_chooser2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" line 162: Output port <obstacle_hvel> of the instance <obstacle1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" line 180: Output port <obstacle_hvel> of the instance <obstacle2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Downloads\NERP_demo\NERP_demo_top.v" line 214: Output port <cloud_hvel> of the instance <block6> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <main> synthesized.
+
+Synthesizing Unit <debouncer>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\debouncer.v".
+    Found 8-bit register for signal <counter>.
+    Found 1-bit register for signal <bounce_state_temp>.
+    Found 8-bit adder for signal <counter[7]_GND_2_o_add_2_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+Unit <debouncer> synthesized.
+
+Synthesizing Unit <clockdiv>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\clockdiv.v".
+    Found 31-bit register for signal <p>.
+    Found 27-bit register for signal <q>.
+    Found 27-bit adder for signal <q[26]_GND_3_o_add_1_OUT> created at line 52.
+    Found 31-bit adder for signal <p[30]_GND_3_o_add_2_OUT> created at line 53.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  58 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <clockdiv> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\counter.v".
+    Found 4-bit register for signal <score1_int>.
+    Found 4-bit register for signal <score3_int>.
+    Found 4-bit register for signal <score2_int>.
+    Found 4-bit register for signal <score0_int>.
+    Found 2-bit register for signal <level_int>.
+    Found 4-bit adder for signal <score1[3]_GND_5_o_add_8_OUT> created at line 49.
+    Found 4-bit adder for signal <score2[3]_GND_5_o_add_10_OUT> created at line 53.
+    Found 4-bit adder for signal <score3[3]_GND_5_o_add_14_OUT> created at line 58.
+    Found 4-bit adder for signal <score0[3]_GND_5_o_add_19_OUT> created at line 69.
+    Found 4-bit comparator greater for signal <n0006> created at line 40
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <counter> synthesized.
+
+Synthesizing Unit <dinofields>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\dinofields.v".
+        gravity = 1
+        initial_velocity = 17
+        dino_size = 40
+    Found 1-bit register for signal <v_dir>.
+    Found 6-bit register for signal <dino_vvel_reg>.
+    Found 10-bit register for signal <dino_v_reg>.
+    Found 1-bit register for signal <is_jump_reg>.
+    Found 10-bit subtractor for signal <dino_v_reg[9]_GND_6_o_sub_5_OUT> created at line 41.
+    Found 10-bit adder for signal <dino_v_reg[9]_GND_6_o_add_6_OUT> created at line 46.
+    Found 6-bit adder for signal <dino_vvel_reg[5]_GND_6_o_add_7_OUT> created at line 47.
+    Found 6-bit subtractor for signal <GND_6_o_GND_6_o_sub_6_OUT<5:0>> created at line 42.
+    Found 6-bit comparator lessequal for signal <n0014> created at line 55
+    Found 10-bit comparator greater for signal <GND_6_o_dino_v_reg[9]_LessThan_14_o> created at line 60
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <dinofields> synthesized.
+
+Synthesizing Unit <lfsr>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\lfsr.v".
+    Found 8-bit register for signal <out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <lfsr> synthesized.
+
+Synthesizing Unit <obstacle>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\obstacles.v".
+        screen_width = 640
+        cactus_height = 80
+        cactus_width = 30
+        pter_height = 30
+        pter_width = 60
+    Found 1-bit register for signal <wait_state>.
+    Found 8-bit register for signal <obstacle_width_reg>.
+    Found 8-bit register for signal <obstacle_counter>.
+    Found 8-bit register for signal <obstacle_height_reg>.
+    Found 1-bit register for signal <obstacle_h_reg<9>>.
+    Found 1-bit register for signal <obstacle_h_reg<8>>.
+    Found 1-bit register for signal <obstacle_h_reg<7>>.
+    Found 1-bit register for signal <obstacle_h_reg<6>>.
+    Found 1-bit register for signal <obstacle_h_reg<5>>.
+    Found 1-bit register for signal <obstacle_h_reg<4>>.
+    Found 1-bit register for signal <obstacle_h_reg<3>>.
+    Found 1-bit register for signal <obstacle_h_reg<2>>.
+    Found 1-bit register for signal <obstacle_h_reg<1>>.
+    Found 1-bit register for signal <obstacle_h_reg<0>>.
+    Found 1-bit register for signal <obstacle_v_reg<9>>.
+    Found 1-bit register for signal <obstacle_v_reg<8>>.
+    Found 1-bit register for signal <obstacle_v_reg<7>>.
+    Found 1-bit register for signal <obstacle_v_reg<6>>.
+    Found 1-bit register for signal <obstacle_v_reg<5>>.
+    Found 1-bit register for signal <obstacle_v_reg<4>>.
+    Found 1-bit register for signal <obstacle_v_reg<3>>.
+    Found 1-bit register for signal <obstacle_v_reg<2>>.
+    Found 1-bit register for signal <obstacle_v_reg<1>>.
+    Found 1-bit register for signal <obstacle_v_reg<0>>.
+    Found 1-bit register for signal <curr_obstacle_time<7>>.
+    Found 1-bit register for signal <curr_obstacle_time<6>>.
+    Found 1-bit register for signal <curr_obstacle_time<5>>.
+    Found 1-bit register for signal <curr_obstacle_time<4>>.
+    Found 1-bit register for signal <curr_obstacle_time<3>>.
+    Found 1-bit register for signal <curr_obstacle_time<2>>.
+    Found 1-bit register for signal <curr_obstacle_time<1>>.
+    Found 1-bit register for signal <curr_obstacle_time<0>>.
+    Found 10-bit subtractor for signal <GND_9_o_GND_9_o_sub_7_OUT> created at line 44.
+    Found 10-bit subtractor for signal <obstacle_h_reg[9]_GND_9_o_sub_12_OUT> created at line 58.
+    Found 8-bit adder for signal <obstacle_counter[7]_GND_9_o_add_8_OUT> created at line 51.
+    Found 10-bit adder for signal <PWR_9_o_GND_9_o_add_19_OUT> created at line 84.
+    Found 10-bit comparator greater for signal <n0012> created at line 60
+    Found 8-bit comparator equal for signal <GND_9_o_GND_9_o_equal_10_o> created at line 52
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  53 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <obstacle> synthesized.
+
+Synthesizing Unit <mod_8u_2u>.
+    Related source file is "".
+    Found 10-bit adder for signal <n0227> created at line 0.
+    Found 10-bit adder for signal <GND_10_o_b[1]_add_1_OUT> created at line 0.
+    Found 9-bit adder for signal <n0231> created at line 0.
+    Found 9-bit adder for signal <GND_10_o_b[1]_add_3_OUT> created at line 0.
+    Found 8-bit adder for signal <n0235> created at line 0.
+    Found 8-bit adder for signal <a[7]_b[1]_add_5_OUT> created at line 0.
+    Found 8-bit adder for signal <n0239> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_10_o_add_7_OUT> created at line 0.
+    Found 8-bit adder for signal <n0243> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_10_o_add_9_OUT> created at line 0.
+    Found 8-bit adder for signal <n0247> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_10_o_add_11_OUT> created at line 0.
+    Found 8-bit adder for signal <n0251> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_10_o_add_13_OUT> created at line 0.
+    Found 8-bit adder for signal <n0255> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_10_o_add_15_OUT> created at line 0.
+    Found 8-bit adder for signal <n0259> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_10_o_add_17_OUT> created at line 0.
+    Found 10-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred  18 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  65 Multiplexer(s).
+Unit <mod_8u_2u> synthesized.
+
+Synthesizing Unit <enemy>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\enemy.v".
+        screen_width = 640
+        cactus_height = 80
+        cactus_width = 30
+        pter_height = 30
+        pter_width = 60
+WARNING:Xst:647 - Input <obstacle_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <wait_state_obstacle>.
+    Found 1-bit register for signal <wait_state_counter>.
+    Found 8-bit register for signal <obstacle_width_reg>.
+    Found 10-bit register for signal <obstacle_v_reg>.
+    Found 8-bit register for signal <obstacle_height_reg>.
+    Found 8-bit register for signal <current_obstacle_num>.
+    Found 8-bit register for signal <counter>.
+    Found 1-bit register for signal <obstacle_h_reg<9>>.
+    Found 1-bit register for signal <obstacle_h_reg<8>>.
+    Found 1-bit register for signal <obstacle_h_reg<7>>.
+    Found 1-bit register for signal <obstacle_h_reg<6>>.
+    Found 1-bit register for signal <obstacle_h_reg<5>>.
+    Found 1-bit register for signal <obstacle_h_reg<4>>.
+    Found 1-bit register for signal <obstacle_h_reg<3>>.
+    Found 1-bit register for signal <obstacle_h_reg<2>>.
+    Found 1-bit register for signal <obstacle_h_reg<1>>.
+    Found 1-bit register for signal <obstacle_h_reg<0>>.
+    Found 10-bit subtractor for signal <obstacle_h_reg[9]_GND_12_o_sub_16_OUT> created at line 154.
+    Found 8-bit adder for signal <counter[7]_GND_12_o_add_13_OUT> created at line 149.
+    Found 10-bit adder for signal <PWR_11_o_GND_12_o_add_25_OUT> created at line 178.
+    Found 10-bit comparator greater for signal <n0005> created at line 136
+    Found 10-bit comparator greater for signal <n0016> created at line 156
+    Found 8-bit comparator equal for signal <GND_12_o_GND_12_o_equal_13_o> created at line 145
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <enemy> synthesized.
+
+Synthesizing Unit <mod_8u_5u>.
+    Related source file is "".
+    Found 13-bit adder for signal <GND_13_o_b[4]_add_1_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_13_o_b[4]_add_3_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_13_o_b[4]_add_5_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_13_o_b[4]_add_7_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_13_o_b[4]_add_9_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_b[4]_add_11_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_13_o_add_13_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_13_o_add_15_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_13_o_add_17_OUT> created at line 0.
+    Found 13-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  65 Multiplexer(s).
+Unit <mod_8u_5u> synthesized.
+
+Synthesizing Unit <collisions>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\collisions.v".
+        dino_size = 40
+        buffer = 80
+        collision_buffer = 0
+    Found 1-bit register for signal <alive>.
+    Found 10-bit register for signal <obstacle_h_shift>.
+    Found 10-bit register for signal <enemy_h_shift>.
+    Found 11-bit adder for signal <n0082> created at line 31.
+    Found 11-bit adder for signal <n0084> created at line 32.
+    Found 11-bit adder for signal <n0086[10:0]> created at line 34.
+    Found 12-bit adder for signal <n0067> created at line 34.
+    Found 11-bit adder for signal <n0069> created at line 35.
+    Found 11-bit adder for signal <n0072> created at line 35.
+    Found 11-bit adder for signal <n0079> created at line 37.
+    Found 10-bit subtractor for signal <GND_15_o_GND_15_o_sub_4_OUT<9:0>> created at line 31.
+    Found 10-bit subtractor for signal <GND_15_o_GND_15_o_sub_6_OUT<9:0>> created at line 32.
+    Found 10-bit comparator greater for signal <obstacle_h[9]_dino_h[9]_LessThan_7_o> created at line 34
+    Found 12-bit comparator greater for signal <BUS_0004_GND_15_o_LessThan_10_o> created at line 34
+    Found 11-bit comparator greater for signal <BUS_0005_GND_15_o_LessThan_12_o> created at line 35
+    Found 11-bit comparator greater for signal <BUS_0006_GND_15_o_LessThan_14_o> created at line 35
+    Found 10-bit comparator greater for signal <enemy_h[9]_dino_h[9]_LessThan_15_o> created at line 36
+    Found 12-bit comparator greater for signal <BUS_0008_GND_15_o_LessThan_18_o> created at line 36
+    Found 11-bit comparator greater for signal <BUS_0009_GND_15_o_LessThan_20_o> created at line 37
+    Found 11-bit comparator greater for signal <BUS_0010_GND_15_o_LessThan_22_o> created at line 37
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <collisions> synthesized.
+
+Synthesizing Unit <clouds>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\clouds.v".
+        cloud_height = 30
+        cloud_width = 80
+        screen_width = 640
+    Found 10-bit register for signal <cloud_v_reg>.
+    Found 10-bit register for signal <cloud_h_reg>.
+    Found 10-bit subtractor for signal <cloud_h_reg[9]_GND_17_o_sub_4_OUT> created at line 30.
+    Found 10-bit comparator greater for signal <n0004> created at line 32
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <clouds> synthesized.
+
+Synthesizing Unit <seven_segment>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\seven_segment.v".
+WARNING:Xst:653 - Signal <blank_seg> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <score2_segments>.
+    Found 8-bit register for signal <score1_segments>.
+    Found 8-bit register for signal <score0_segments>.
+    Found 2-bit register for signal <counter>.
+    Found 4-bit register for signal <digit_index>.
+    Found 8-bit register for signal <segments>.
+    Found 8-bit register for signal <score3_segments>.
+    Found 2-bit adder for signal <counter[1]_GND_19_o_add_5_OUT> created at line 98.
+    Found 16x8-bit Read Only RAM for signal <score3[3]_PWR_16_o_wide_mux_1_OUT>
+    Found 16x8-bit Read Only RAM for signal <score2[3]_PWR_16_o_wide_mux_2_OUT>
+    Found 16x8-bit Read Only RAM for signal <score1[3]_PWR_16_o_wide_mux_3_OUT>
+    Found 16x8-bit Read Only RAM for signal <score0[3]_PWR_16_o_wide_mux_4_OUT>
+    Found 4x4-bit Read Only RAM for signal <counter[1]_PWR_16_o_wide_mux_6_OUT>
+    Found 8-bit 4-to-1 multiplexer for signal <counter[1]_score0_segments[7]_wide_mux_7_OUT> created at line 101.
+    Summary:
+	inferred   5 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  46 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <seven_segment> synthesized.
+
+Synthesizing Unit <vga640x480>.
+    Related source file is "C:\Users\152\Downloads\NERP_demo\vga640x480.v".
+        hpixels = 800
+        vlines = 521
+        hpulse = 96
+        vpulse = 2
+        hbp = 144
+        hfp = 784
+        vbp = 31
+        vfp = 511
+        dino_size = 40
+        cloud_height = 30
+        cloud_width = 80
+WARNING:Xst:647 - Input <dino_h> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <score3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <score2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <score1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <score0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 10-bit register for signal <vc>.
+    Found 10-bit register for signal <hc>.
+    Found 12-bit subtractor for signal <GND_20_o_GND_20_o_sub_39_OUT> created at line 146.
+    Found 12-bit subtractor for signal <GND_20_o_GND_20_o_sub_49_OUT> created at line 151.
+    Found 12-bit subtractor for signal <GND_20_o_GND_20_o_sub_59_OUT> created at line 156.
+    Found 10-bit adder for signal <hc[9]_GND_20_o_add_2_OUT> created at line 88.
+    Found 10-bit adder for signal <vc[9]_GND_20_o_add_4_OUT> created at line 97.
+    Found 11-bit adder for signal <n0161> created at line 140.
+    Found 12-bit adder for signal <n0165> created at line 140.
+    Found 11-bit adder for signal <n0166> created at line 146.
+    Found 12-bit adder for signal <n0171> created at line 146.
+    Found 11-bit adder for signal <n0173> created at line 146.
+    Found 11-bit adder for signal <n0178> created at line 151.
+    Found 12-bit adder for signal <n0182> created at line 151.
+    Found 11-bit adder for signal <n0184> created at line 151.
+    Found 11-bit adder for signal <n0188> created at line 156.
+    Found 12-bit adder for signal <n0193> created at line 156.
+    Found 11-bit adder for signal <n0195> created at line 156.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 10-bit comparator greater for signal <hc[9]_PWR_17_o_LessThan_2_o> created at line 87
+    Found 10-bit comparator greater for signal <vc[9]_PWR_17_o_LessThan_4_o> created at line 96
+    Found 10-bit comparator greater for signal <hc[9]_GND_20_o_LessThan_11_o> created at line 109
+    Found 10-bit comparator greater for signal <vc[9]_GND_20_o_LessThan_13_o> created at line 110
+    Found 10-bit comparator lessequal for signal <n0015> created at line 123
+    Found 10-bit comparator lessequal for signal <n0017> created at line 123
+    Found 10-bit comparator lessequal for signal <n0020> created at line 123
+    Found 10-bit comparator lessequal for signal <n0023> created at line 123
+    Found 10-bit comparator greater for signal <GND_20_o_vc[9]_LessThan_20_o> created at line 125
+    Found 10-bit comparator greater for signal <vc[9]_GND_20_o_LessThan_21_o> created at line 125
+    Found 10-bit comparator greater for signal <hc[9]_PWR_17_o_LessThan_23_o> created at line 125
+    Found 11-bit comparator greater for signal <BUS_0003_GND_20_o_LessThan_25_o> created at line 140
+    Found 12-bit comparator greater for signal <GND_20_o_BUS_0005_LessThan_28_o> created at line 140
+    Found 10-bit comparator greater for signal <GND_20_o_hc[9]_LessThan_29_o> created at line 140
+    Found 10-bit comparator greater for signal <hc[9]_GND_20_o_LessThan_30_o> created at line 140
+    Found 11-bit comparator lessequal for signal <n0042> created at line 146
+    Found 12-bit comparator lessequal for signal <n0045> created at line 146
+    Found 11-bit comparator lessequal for signal <n0049> created at line 146
+    Found 32-bit comparator lessequal for signal <n0053> created at line 146
+    Found 11-bit comparator greater for signal <BUS_0011_GND_20_o_LessThan_42_o> created at line 151
+    Found 12-bit comparator greater for signal <GND_20_o_BUS_0013_LessThan_45_o> created at line 151
+    Found 11-bit comparator greater for signal <GND_20_o_BUS_0014_LessThan_47_o> created at line 151
+    Found 32-bit comparator greater for signal <GND_20_o_GND_20_o_LessThan_50_o> created at line 151
+    Found 11-bit comparator lessequal for signal <n0068> created at line 156
+    Found 12-bit comparator lessequal for signal <n0071> created at line 156
+    Found 11-bit comparator lessequal for signal <n0075> created at line 156
+    Found 32-bit comparator lessequal for signal <n0079> created at line 156
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   5 Latch(s).
+	inferred  27 Comparator(s).
+	inferred  13 Multiplexer(s).
+Unit <vga640x480> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x8-bit single-port Read Only RAM                    : 4
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 88
+ 10-bit adder                                          : 9
+ 10-bit addsub                                         : 1
+ 10-bit subtractor                                     : 6
+ 11-bit adder                                          : 14
+ 12-bit adder                                          : 6
+ 12-bit subtractor                                     : 3
+ 13-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 27-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 4-bit adder                                           : 4
+ 6-bit addsub                                          : 1
+ 8-bit adder                                           : 35
+ 9-bit adder                                           : 5
+# Registers                                            : 78
+ 1-bit register                                        : 45
+ 10-bit register                                       : 8
+ 2-bit register                                        : 2
+ 27-bit register                                       : 1
+ 31-bit register                                       : 1
+ 4-bit register                                        : 5
+ 6-bit register                                        : 1
+ 8-bit register                                        : 15
+# Latches                                              : 5
+ 1-bit latch                                           : 5
+# Comparators                                          : 71
+ 10-bit comparator greater                             : 16
+ 10-bit comparator lessequal                           : 7
+ 11-bit comparator greater                             : 7
+ 11-bit comparator lessequal                           : 5
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 3
+ 13-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 1
+ 8-bit comparator equal                                : 2
+ 8-bit comparator lessequal                            : 18
+ 9-bit comparator lessequal                            : 3
+# Multiplexers                                         : 236
+ 1-bit 2-to-1 multiplexer                              : 206
+ 10-bit 2-to-1 multiplexer                             : 15
+ 2-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 5
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_2> in Unit <obstacle1> is equivalent to the following 3 FFs/Latches, which will be removed : <obstacle_width_reg_3> <obstacle_width_reg_4> <obstacle_height_reg_4> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_0> in Unit <obstacle1> is equivalent to the following 5 FFs/Latches, which will be removed : <obstacle_width_reg_6> <obstacle_width_reg_7> <obstacle_height_reg_0> <obstacle_height_reg_5> <obstacle_height_reg_7> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_1> in Unit <obstacle1> is equivalent to the following FF/Latch, which will be removed : <obstacle_height_reg_6> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_5> in Unit <obstacle1> is equivalent to the following 3 FFs/Latches, which will be removed : <obstacle_height_reg_1> <obstacle_height_reg_2> <obstacle_height_reg_3> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_2> in Unit <obstacle2> is equivalent to the following 3 FFs/Latches, which will be removed : <obstacle_width_reg_3> <obstacle_width_reg_4> <obstacle_height_reg_4> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_1> in Unit <obstacle2> is equivalent to the following FF/Latch, which will be removed : <obstacle_height_reg_6> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_0> in Unit <obstacle2> is equivalent to the following 5 FFs/Latches, which will be removed : <obstacle_width_reg_6> <obstacle_width_reg_7> <obstacle_height_reg_0> <obstacle_height_reg_5> <obstacle_height_reg_7> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_5> in Unit <obstacle2> is equivalent to the following 3 FFs/Latches, which will be removed : <obstacle_height_reg_1> <obstacle_height_reg_2> <obstacle_height_reg_3> 
+INFO:Xst:2261 - The FF/Latch <cloud_v_reg_0> in Unit <block6> is equivalent to the following 5 FFs/Latches, which will be removed : <cloud_v_reg_2> <cloud_v_reg_4> <cloud_v_reg_6> <cloud_v_reg_8> <cloud_v_reg_9> 
+INFO:Xst:2261 - The FF/Latch <cloud_v_reg_1> in Unit <block6> is equivalent to the following 3 FFs/Latches, which will be removed : <cloud_v_reg_3> <cloud_v_reg_5> <cloud_v_reg_7> 
+WARNING:Xst:1710 - FF/Latch <level_int_1> (without init value) has a constant value of 0 in block <block4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <obstacle_width_reg_0> has a constant value of 0 in block <obstacle1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <obstacle_width_reg_2> has a constant value of 1 in block <obstacle1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <obstacle_width_reg_0> has a constant value of 0 in block <obstacle2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <obstacle_width_reg_2> has a constant value of 1 in block <obstacle2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cloud_v_reg_0> has a constant value of 0 in block <block6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cloud_v_reg_1> has a constant value of 1 in block <block6>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <clockdiv>.
+The following registers are absorbed into counter <p>: 1 register on signal <p>.
+The following registers are absorbed into counter <q>: 1 register on signal <q>.
+Unit <clockdiv> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <score1_int>: 1 register on signal <score1_int>.
+The following registers are absorbed into counter <score3_int>: 1 register on signal <score3_int>.
+The following registers are absorbed into counter <score2_int>: 1 register on signal <score2_int>.
+The following registers are absorbed into counter <score0_int>: 1 register on signal <score0_int>.
+Unit <counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <debouncer>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <debouncer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <enemy>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <enemy> synthesized (advanced).
+
+Synthesizing (advanced) Unit <seven_segment>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+INFO:Xst:3231 - The small RAM <Mram_counter[1]_PWR_16_o_wide_mux_6_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <counter>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_score3[3]_PWR_16_o_wide_mux_1_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score3>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_score1[3]_PWR_16_o_wide_mux_3_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score1>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_score2[3]_PWR_16_o_wide_mux_2_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score2>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_score0[3]_PWR_16_o_wide_mux_4_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score0>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <seven_segment> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga640x480>.
+The following registers are absorbed into counter <hc>: 1 register on signal <hc>.
+The following registers are absorbed into counter <vc>: 1 register on signal <vc>.
+Unit <vga640x480> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x8-bit single-port distributed Read Only RAM        : 4
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 58
+ 10-bit adder                                          : 4
+ 10-bit addsub                                         : 1
+ 10-bit subtractor                                     : 6
+ 11-bit adder                                          : 10
+ 12-bit adder                                          : 5
+ 12-bit subtractor                                     : 3
+ 2-bit adder carry in                                  : 2
+ 5-bit adder                                           : 1
+ 6-bit addsub                                          : 1
+ 8-bit adder                                           : 9
+ 8-bit adder carry in                                  : 16
+# Counters                                             : 11
+ 10-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 27-bit up counter                                     : 1
+ 31-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+ 8-bit up counter                                      : 2
+# Registers                                            : 221
+ Flip-Flops                                            : 221
+# Comparators                                          : 71
+ 10-bit comparator greater                             : 16
+ 10-bit comparator lessequal                           : 7
+ 11-bit comparator greater                             : 7
+ 11-bit comparator lessequal                           : 5
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 3
+ 13-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 1
+ 8-bit comparator equal                                : 2
+ 8-bit comparator lessequal                            : 18
+ 9-bit comparator lessequal                            : 3
+# Multiplexers                                         : 227
+ 1-bit 2-to-1 multiplexer                              : 204
+ 10-bit 2-to-1 multiplexer                             : 12
+ 2-bit 2-to-1 multiplexer                              : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 5
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <main>: instances <obstacle_chooser>, <timing_chooser1> of unit <lfsr> are equivalent, second instance is removed
+WARNING:Xst:1710 - FF/Latch <level_int_1> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <obstacle_width_reg_0> has a constant value of 0 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_2> has a constant value of 1 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_3> has a constant value of 1 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_4> has a constant value of 1 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_6> has a constant value of 0 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_7> has a constant value of 0 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_height_reg_0> has a constant value of 0 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_height_reg_4> has a constant value of 1 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_height_reg_5> has a constant value of 0 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_height_reg_7> has a constant value of 0 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <obstacle_width_reg_0> has a constant value of 0 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_2> has a constant value of 1 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_3> has a constant value of 1 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_4> has a constant value of 1 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_6> has a constant value of 0 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_width_reg_7> has a constant value of 0 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_height_reg_0> has a constant value of 0 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_height_reg_4> has a constant value of 1 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_height_reg_5> has a constant value of 0 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_height_reg_7> has a constant value of 0 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_v_reg_8> has a constant value of 1 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <obstacle_v_reg_9> has a constant value of 0 in block <enemy>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cloud_v_reg_0> has a constant value of 0 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cloud_v_reg_1> has a constant value of 1 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cloud_v_reg_2> has a constant value of 0 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cloud_v_reg_3> has a constant value of 1 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cloud_v_reg_4> has a constant value of 0 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cloud_v_reg_5> has a constant value of 1 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cloud_v_reg_6> has a constant value of 0 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cloud_v_reg_7> has a constant value of 1 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cloud_v_reg_8> has a constant value of 0 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cloud_v_reg_9> has a constant value of 0 in block <clouds>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_1> in Unit <obstacle> is equivalent to the following FF/Latch, which will be removed : <obstacle_height_reg_6> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_5> in Unit <obstacle> is equivalent to the following 3 FFs/Latches, which will be removed : <obstacle_height_reg_1> <obstacle_height_reg_2> <obstacle_height_reg_3> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_1> in Unit <enemy> is equivalent to the following 2 FFs/Latches, which will be removed : <obstacle_height_reg_6> <obstacle_v_reg_3> 
+INFO:Xst:2261 - The FF/Latch <obstacle_v_reg_5> in Unit <enemy> is equivalent to the following FF/Latch, which will be removed : <obstacle_v_reg_6> 
+INFO:Xst:2261 - The FF/Latch <obstacle_v_reg_0> in Unit <enemy> is equivalent to the following FF/Latch, which will be removed : <obstacle_v_reg_4> 
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_5> in Unit <enemy> is equivalent to the following 3 FFs/Latches, which will be removed : <obstacle_height_reg_1> <obstacle_height_reg_2> <obstacle_height_reg_3> 
+INFO:Xst:2146 - In block <main>, Counter <U1/p> <U1/q> are equivalent, XST will keep only <U1/p>.
+WARNING:Xst:1710 - FF/Latch <score2_segments_7> (without init value) has a constant value of 1 in block <seven_segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <score1_segments_7> (without init value) has a constant value of 1 in block <seven_segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <score0_segments_7> (without init value) has a constant value of 1 in block <seven_segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <score3_segments_7> (without init value) has a constant value of 1 in block <seven_segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <obstacle_v_reg_9> has a constant value of 0 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <curr_obstacle_time_7> of sequential type is unconnected in block <obstacle>.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    obstacle_h_reg_1 in unit <enemy>
+    obstacle_h_reg_5 in unit <enemy>
+    curr_obstacle_time_0 in unit <obstacle>
+    curr_obstacle_time_1 in unit <obstacle>
+    curr_obstacle_time_2 in unit <obstacle>
+    curr_obstacle_time_3 in unit <obstacle>
+    curr_obstacle_time_5 in unit <obstacle>
+    curr_obstacle_time_6 in unit <obstacle>
+    curr_obstacle_time_4 in unit <obstacle>
+    obstacle_v_reg_1 in unit <obstacle>
+    obstacle_v_reg_3 in unit <obstacle>
+    obstacle_v_reg_4 in unit <obstacle>
+    obstacle_v_reg_5 in unit <obstacle>
+    obstacle_v_reg_6 in unit <obstacle>
+    obstacle_v_reg_7 in unit <obstacle>
+    obstacle_h_reg_1 in unit <obstacle>
+    obstacle_h_reg_5 in unit <obstacle>
+
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    obstacle_v_reg_7 in unit <enemy>
+    obstacle_v_reg_5 in unit <enemy>
+    obstacle_v_reg_0 in unit <enemy>
+
+
+Optimizing unit <main> ...
+
+Optimizing unit <counter> ...
+
+Optimizing unit <collisions> ...
+
+Optimizing unit <vga640x480> ...
+
+Optimizing unit <dinofields> ...
+
+Optimizing unit <lfsr> ...
+
+Optimizing unit <obstacle> ...
+WARNING:Xst:1293 - FF/Latch <obstacle_v_reg_8> has a constant value of 1 in block <obstacle>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <mod_8u_2u> ...
+
+Optimizing unit <enemy> ...
+INFO:Xst:2261 - The FF/Latch <obstacle_width_reg_5> in Unit <enemy> is equivalent to the following FF/Latch, which will be removed : <obstacle_v_reg_2> 
+
+Optimizing unit <mod_8u_5u> ...
+
+Optimizing unit <clouds> ...
+
+Optimizing unit <seven_segment> ...
+WARNING:Xst:2677 - Node <U1/p_26> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <U1/p_27> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <U1/p_28> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <U1/p_29> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <U1/p_30> of sequential type is unconnected in block <main>.
+INFO:Xst:2261 - The FF/Latch <obstacle1/obstacle_v_reg_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <obstacle1/obstacle_v_reg_2> 
+INFO:Xst:3203 - The FF/Latch <obstacle1/obstacle_width_reg_1> in Unit <main> is the opposite to the following FF/Latch, which will be removed : <obstacle1/obstacle_width_reg_5> 
+INFO:Xst:3203 - The FF/Latch <obstacle2/obstacle_v_reg_5> in Unit <main> is the opposite to the following FF/Latch, which will be removed : <obstacle2/obstacle_v_reg_7> 
+INFO:Xst:3203 - The FF/Latch <obstacle2/obstacle_width_reg_5> in Unit <main> is the opposite to the following FF/Latch, which will be removed : <obstacle2/obstacle_width_reg_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 11.
+WARNING:Xst:1426 - The value init of the FF/Latch obstacle2/obstacle_v_reg_5_LD hinder the constant cleaning in the block main.
+   You should achieve better results by setting this init to 1.
+INFO:Xst:2261 - The FF/Latch <obstacle2/obstacle_width_reg_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <obstacle2/obstacle_v_reg_0_P_0> 
+INFO:Xst:2260 - The FF/Latch <obstacle1/obstacle_v_reg_5_LDC1> in Unit <main> is equivalent to the following FF/Latch : <obstacle1/obstacle_v_reg_6_LDC1> 
+INFO:Xst:2260 - The FF/Latch <obstacle1/obstacle_v_reg_1_LDC> in Unit <main> is equivalent to the following FF/Latch : <obstacle1/obstacle_v_reg_7_LDC> 
+INFO:Xst:2261 - The FF/Latch <obstacle1/obstacle_v_reg_5_LDC1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <obstacle1/obstacle_v_reg_6_LDC1> 
+INFO:Xst:2261 - The FF/Latch <obstacle1/obstacle_v_reg_1_LDC> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <obstacle1/obstacle_v_reg_7_LDC> 
+Latch U3/red_0 has been replicated 1 time(s) to handle iob=true attribute.
+Latch U3/green_2 has been replicated 2 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 254
+ Flip-Flops                                            : 254
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1101
+#      GND                         : 1
+#      INV                         : 33
+#      LUT1                        : 48
+#      LUT2                        : 86
+#      LUT3                        : 79
+#      LUT4                        : 231
+#      LUT5                        : 106
+#      LUT6                        : 144
+#      MUXCY                       : 230
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 138
+# FlipFlops/Latches                : 274
+#      FD                          : 30
+#      FDC                         : 65
+#      FDCE                        : 46
+#      FDE                         : 30
+#      FDP                         : 33
+#      FDPE                        : 12
+#      FDR                         : 17
+#      FDRE                        : 17
+#      FDS                         : 4
+#      LD                          : 1
+#      LDC                         : 17
+#      LDP                         : 2
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 2
+#      OBUF                        : 22
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             265  out of  18224     1%  
+ Number of Slice LUTs:                  727  out of   9112     7%  
+    Number used as Logic:               727  out of   9112     7%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    771
+   Number with an unused Flip Flop:     506  out of    771    65%  
+   Number with an unused LUT:            44  out of    771     5%  
+   Number of fully used LUT-FF pairs:   221  out of    771    28%  
+   Number of unique control sets:        55
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    232    10%  
+    IOB Flip Flops/Latches:               9
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------+--------------------------------------------+-------+
+Clock Signal                                                                       | Clock buffer(FF name)                      | Load  |
+-----------------------------------------------------------------------------------+--------------------------------------------+-------+
+clk                                                                                | BUFGP                                      | 35    |
+U1/p_24                                                                            | NONE(block4/score0_int_3)                  | 17    |
+U1/p_1                                                                             | BUFG                                       | 41    |
+U3/hc[9]_GND_20_o_AND_82_o(U3/hc[9]_GND_20_o_AND_82_o5:O)                          | NONE(*)(U3/green_0)                        | 8     |
+U1/p_21                                                                            | NONE(block1/v_dir)                         | 18    |
+cactus_clk(U1/Mmux_cactus_clk_reg_q[21]_MUX_12_o11:O)                              | BUFG(*)(obstacle_chooser/out_7)            | 101   |
+U1/p_17                                                                            | BUFG                                       | 42    |
+obstacle1/rst_obstacle_time[0]_AND_57_o(obstacle1/rst_obstacle_time[0]_AND_57_o1:O)| NONE(*)(obstacle1/curr_obstacle_time_0_LDC)| 1     |
+obstacle1/rst_obstacle_time[1]_AND_55_o(obstacle1/rst_obstacle_time[1]_AND_55_o1:O)| NONE(*)(obstacle1/curr_obstacle_time_1_LDC)| 1     |
+obstacle1/rst_obstacle_time[2]_AND_53_o(obstacle1/rst_obstacle_time[2]_AND_53_o1:O)| NONE(*)(obstacle1/curr_obstacle_time_2_LDC)| 1     |
+obstacle1/rst_obstacle_time[3]_AND_51_o(obstacle1/rst_obstacle_time[3]_AND_51_o1:O)| NONE(*)(obstacle1/curr_obstacle_time_3_LDC)| 1     |
+obstacle1/rst_obstacle_time[5]_AND_47_o(obstacle1/rst_obstacle_time[5]_AND_47_o1:O)| NONE(*)(obstacle1/curr_obstacle_time_5_LDC)| 1     |
+obstacle1/rst_obstacle_time[6]_AND_45_o(obstacle1/rst_obstacle_time[6]_AND_45_o1:O)| NONE(*)(obstacle1/curr_obstacle_time_6_LDC)| 1     |
+obstacle1/rst_obstacle_time[4]_AND_49_o(obstacle1/rst_obstacle_time[4]_AND_49_o1:O)| NONE(*)(obstacle1/curr_obstacle_time_4_LDC)| 1     |
+obstacle1/rst_GND_9_o_AND_27_o(obstacle1/rst_GND_9_o_AND_27_o1:O)                  | NONE(*)(obstacle1/obstacle_v_reg_1_LDC)    | 2     |
+block3/bounce_state_temp                                                           | NONE(obstacle2/obstacle_v_reg_5_LD)        | 1     |
+obstacle2/rst_PWR_11_o_AND_68_o(obstacle2/rst_PWR_11_o_AND_68_o1:O)                | NONE(*)(obstacle2/obstacle_h_reg_1_LDC)    | 2     |
+-----------------------------------------------------------------------------------+--------------------------------------------+-------+
+(*) These 11 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.752ns (Maximum Frequency: 148.113MHz)
+   Minimum input arrival time before clock: 4.508ns
+   Maximum output required time after clock: 5.925ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.438ns (frequency: 225.332MHz)
+  Total number of paths / destination ports: 460 / 44
+-------------------------------------------------------------------------
+Delay:               4.438ns (Levels of Logic = 3)
+  Source:            block3/counter_2 (FF)
+  Destination:       block3/counter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: block3/counter_2 to block3/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.845  block3/counter_2 (block3/counter_2)
+     LUT3:I0->O            1   0.205   0.580  block3/counter[7]_PWR_2_o_equal_4_o<7>_SW0 (N4)
+     LUT6:I5->O            2   0.205   0.721  block3/counter[7]_PWR_2_o_equal_4_o<7> (block3/counter[7]_PWR_2_o_equal_4_o)
+     LUT2:I0->O            8   0.203   0.802  block3/Mcount_counter_val1 (block3/Mcount_counter_val)
+     FDR:R                     0.430          block3/counter_0
+    ----------------------------------------
+    Total                      4.438ns (1.490ns logic, 2.948ns route)
+                                       (33.6% logic, 66.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U1/p_24'
+  Clock period: 4.122ns (frequency: 242.595MHz)
+  Total number of paths / destination ports: 163 / 30
+-------------------------------------------------------------------------
+Delay:               4.122ns (Levels of Logic = 2)
+  Source:            block4/score0_int_0 (FF)
+  Destination:       block4/score2_int_3 (FF)
+  Source Clock:      U1/p_24 rising
+  Destination Clock: U1/p_24 rising
+
+  Data Path: block4/score0_int_0 to block4/score2_int_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            12   0.447   1.156  block4/score0_int_0 (block4/score0_int_0)
+     LUT5:I1->O            6   0.203   1.109  block4/_n0111_inv21 (block4/_n0111_inv2)
+     LUT6:I0->O            4   0.203   0.683  block4/_n0119_inv1 (block4/_n0119_inv)
+     FDCE:CE                   0.322          block4/score2_int_0
+    ----------------------------------------
+    Total                      4.122ns (1.175ns logic, 2.947ns route)
+                                       (28.5% logic, 71.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U1/p_1'
+  Clock period: 4.977ns (frequency: 200.922MHz)
+  Total number of paths / destination ports: 1338 / 51
+-------------------------------------------------------------------------
+Delay:               4.977ns (Levels of Logic = 13)
+  Source:            U3/hc_4 (FF)
+  Destination:       U3/hc_9 (FF)
+  Source Clock:      U1/p_1 rising
+  Destination Clock: U1/p_1 rising
+
+  Data Path: U3/hc_4 to U3/hc_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             19   0.447   1.300  U3/hc_4 (U3/hc_4)
+     LUT4:I1->O            3   0.205   0.755  U3/hc[9]_PWR_17_o_LessThan_2_o_inv_SW0 (N10)
+     LUT6:I4->O           17   0.203   1.256  U3/hc[9]_PWR_17_o_LessThan_2_o_inv (U3/hc[9]_PWR_17_o_LessThan_2_o_inv)
+     LUT3:I0->O            1   0.205   0.000  U3/Mcount_hc_lut<0> (U3/Mcount_hc_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  U3/Mcount_hc_cy<0> (U3/Mcount_hc_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  U3/Mcount_hc_cy<1> (U3/Mcount_hc_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  U3/Mcount_hc_cy<2> (U3/Mcount_hc_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  U3/Mcount_hc_cy<3> (U3/Mcount_hc_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  U3/Mcount_hc_cy<4> (U3/Mcount_hc_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  U3/Mcount_hc_cy<5> (U3/Mcount_hc_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  U3/Mcount_hc_cy<6> (U3/Mcount_hc_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  U3/Mcount_hc_cy<7> (U3/Mcount_hc_cy<7>)
+     MUXCY:CI->O           0   0.019   0.000  U3/Mcount_hc_cy<8> (U3/Mcount_hc_cy<8>)
+     XORCY:CI->O           1   0.180   0.000  U3/Mcount_hc_xor<9> (U3/Mcount_hc9)
+     FDC:D                     0.102          U3/hc_9
+    ----------------------------------------
+    Total                      4.977ns (1.666ns logic, 3.311ns route)
+                                       (33.5% logic, 66.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U1/p_21'
+  Clock period: 5.050ns (frequency: 198.022MHz)
+  Total number of paths / destination ports: 506 / 36
+-------------------------------------------------------------------------
+Delay:               5.050ns (Levels of Logic = 3)
+  Source:            block1/dino_v_reg_2 (FF)
+  Destination:       block1/v_dir (FF)
+  Source Clock:      U1/p_21 rising
+  Destination Clock: U1/p_21 rising
+
+  Data Path: block1/dino_v_reg_2 to block1/v_dir
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            19   0.447   1.416  block1/dino_v_reg_2 (block1/dino_v_reg_2)
+     LUT5:I0->O            1   0.203   0.580  block1/v_dir_PWR_5_o_MUX_57_o11 (block1/v_dir_PWR_5_o_MUX_57_o1)
+     LUT6:I5->O           20   0.205   1.093  block1/v_dir_PWR_5_o_MUX_57_o12 (block1/v_dir_PWR_5_o_MUX_57_o)
+     LUT3:I2->O            1   0.205   0.579  block1/_n0067_inv1 (block1/_n0067_inv)
+     FDPE:CE                   0.322          block1/v_dir
+    ----------------------------------------
+    Total                      5.050ns (1.382ns logic, 3.668ns route)
+                                       (27.4% logic, 72.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cactus_clk'
+  Clock period: 6.752ns (frequency: 148.113MHz)
+  Total number of paths / destination ports: 7043 / 173
+-------------------------------------------------------------------------
+Delay:               6.752ns (Levels of Logic = 5)
+  Source:            obstacle2/current_obstacle_num_5 (FF)
+  Destination:       obstacle2/counter_7 (FF)
+  Source Clock:      cactus_clk rising
+  Destination Clock: cactus_clk rising
+
+  Data Path: obstacle2/current_obstacle_num_5 to obstacle2/counter_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.447   1.227  obstacle2/current_obstacle_num_5 (obstacle2/current_obstacle_num_5)
+     LUT6:I1->O            5   0.203   0.819  obstacle2/current_obstacle_num[7]_PWR_11_o_mod_11/BUS_0007_INV_206_o1 (obstacle2/current_obstacle_num[7]_PWR_11_o_mod_11/BUS_0007_INV_206_o)
+     LUT5:I3->O            3   0.203   0.651  obstacle2/current_obstacle_num[7]_PWR_11_o_mod_11/BUS_0009_INV_224_o18 (obstacle2/current_obstacle_num[7]_PWR_11_o_mod_11/BUS_0009_INV_224_o110)
+     LUT6:I5->O            2   0.205   0.617  obstacle2/current_obstacle_num[7]_PWR_11_o_mod_11/BUS_0009_INV_224_o19 (obstacle2/current_obstacle_num[7]_PWR_11_o_mod_11/BUS_0009_INV_224_o)
+     LUT6:I5->O            2   0.205   0.845  obstacle2/GND_12_o_GND_12_o_equal_13_o83 (obstacle2/GND_12_o_GND_12_o_equal_13_o82)
+     LUT6:I3->O            8   0.205   0.802  obstacle2/_n0215_inv1_cepot (obstacle2/_n0215_inv1_cepot)
+     FDRE:CE                   0.322          obstacle2/counter_0
+    ----------------------------------------
+    Total                      6.752ns (1.790ns logic, 4.962ns route)
+                                       (26.5% logic, 73.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U1/p_17'
+  Clock period: 2.266ns (frequency: 441.248MHz)
+  Total number of paths / destination ports: 53 / 13
+-------------------------------------------------------------------------
+Delay:               2.266ns (Levels of Logic = 1)
+  Source:            block5/counter_0 (FF)
+  Destination:       block5/counter_0 (FF)
+  Source Clock:      U1/p_17 rising
+  Destination Clock: U1/p_17 rising
+
+  Data Path: block5/counter_0 to block5/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              13   0.447   0.932  block5/counter_0 (block5/counter_0)
+     INV:I->O              1   0.206   0.579  block5/Mcount_counter_xor<0>11_INV_0 (block5/Result<0>)
+     FD:D                      0.102          block5/counter_0
+    ----------------------------------------
+    Total                      2.266ns (0.755ns logic, 1.511ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              4.325ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       block3/counter_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: clr to block3/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            68   1.222   1.667  clr_IBUF (clr_IBUF)
+     LUT2:I1->O            8   0.205   0.802  block3/Mcount_counter_val1 (block3/Mcount_counter_val)
+     FDR:R                     0.430          block3/counter_0
+    ----------------------------------------
+    Total                      4.325ns (1.857ns logic, 2.468ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/p_24'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              4.348ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       block4/level_int_0 (FF)
+  Destination Clock: U1/p_24 rising
+
+  Data Path: clr to block4/level_int_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            68   1.222   1.914  clr_IBUF (clr_IBUF)
+     LUT4:I0->O            1   0.203   0.579  block4/_n00971 (block4/_n0097)
+     FDR:R                     0.430          block4/level_int_0
+    ----------------------------------------
+    Total                      4.348ns (1.855ns logic, 2.493ns route)
+                                       (42.7% logic, 57.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/p_1'
+  Total number of paths / destination ports: 41 / 41
+-------------------------------------------------------------------------
+Offset:              4.508ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       block2/enemy_h_shift_9 (FF)
+  Destination Clock: U1/p_1 rising
+
+  Data Path: clr to block2/enemy_h_shift_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            68   1.222   1.667  clr_IBUF (clr_IBUF)
+     LUT2:I1->O           20   0.205   1.092  block2/_n0108_inv1 (block2/_n0108_inv)
+     FDE:CE                    0.322          block2/obstacle_h_shift_0
+    ----------------------------------------
+    Total                      4.508ns (1.749ns logic, 2.759ns route)
+                                       (38.8% logic, 61.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/p_21'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.010ns (Levels of Logic = 2)
+  Source:            jump (PAD)
+  Destination:       block1/is_jump_reg (FF)
+  Destination Clock: U1/p_21 rising
+
+  Data Path: jump to block1/is_jump_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.684  jump_IBUF (jump_IBUF)
+     LUT3:I1->O            1   0.203   0.579  block1/_n0083_inv1 (block1/_n0083_inv)
+     FDCE:CE                   0.322          block1/is_jump_reg
+    ----------------------------------------
+    Total                      3.010ns (1.747ns logic, 1.263ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/p_17'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            block5/segments_7 (FF)
+  Destination:       seg<7> (PAD)
+  Source Clock:      U1/p_17 rising
+
+  Data Path: block5/segments_7 to seg<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  block5/segments_7 (block5/segments_7)
+     OBUF:I->O                 2.571          seg_7_OBUF (seg<7>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U3/hc[9]_GND_20_o_AND_82_o'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            U3/red_2 (LATCH)
+  Destination:       red<2> (PAD)
+  Source Clock:      U3/hc[9]_GND_20_o_AND_82_o falling
+
+  Data Path: U3/red_2 to red<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.579  U3/red_2 (U3/red_2)
+     OBUF:I->O                 2.571          red_2_OBUF (red<2>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/p_1'
+  Total number of paths / destination ports: 14 / 2
+-------------------------------------------------------------------------
+Offset:              5.925ns (Levels of Logic = 3)
+  Source:            U3/vc_7 (FF)
+  Destination:       vsync (PAD)
+  Source Clock:      U1/p_1 rising
+
+  Data Path: U3/vc_7 to vsync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            20   0.447   1.340  U3/vc_7 (U3/vc_7)
+     LUT4:I0->O            1   0.203   0.580  U3/_n0284_SW0 (N16)
+     LUT6:I5->O            1   0.205   0.579  U3/_n0284 (vsync_OBUF)
+     OBUF:I->O                 2.571          vsync_OBUF (vsync)
+    ----------------------------------------
+    Total                      5.925ns (3.426ns logic, 2.499ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock U1/p_1
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+U1/p_1                         |    4.977|         |         |         |
+U1/p_21                        |    7.034|         |         |         |
+block3/bounce_state_temp       |         |    8.318|         |         |
+cactus_clk                     |    8.341|         |         |         |
+obstacle1/rst_GND_9_o_AND_27_o |         |    7.741|         |         |
+obstacle2/rst_PWR_11_o_AND_68_o|         |    5.194|         |         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U1/p_17
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U1/p_1         |    2.975|         |         |         |
+U1/p_17        |    2.266|         |         |         |
+U1/p_24        |    1.908|         |         |         |
+clk            |    2.607|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U1/p_21
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U1/p_21        |    5.050|         |         |         |
+clk            |    2.741|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U1/p_24
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U1/p_1         |    4.194|         |         |         |
+U1/p_24        |    4.122|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U3/hc[9]_GND_20_o_AND_82_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+U1/p_1                         |         |         |    7.441|         |
+U1/p_21                        |         |         |    9.510|         |
+block3/bounce_state_temp       |         |         |    6.405|         |
+cactus_clk                     |         |         |    8.923|         |
+obstacle1/rst_GND_9_o_AND_27_o |         |         |    9.532|         |
+obstacle2/rst_PWR_11_o_AND_68_o|         |         |    7.185|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cactus_clk
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+cactus_clk                             |    6.752|         |         |         |
+clk                                    |    4.052|         |         |         |
+obstacle1/rst_GND_9_o_AND_27_o         |         |    6.404|         |         |
+obstacle1/rst_obstacle_time[0]_AND_57_o|         |    4.557|         |         |
+obstacle1/rst_obstacle_time[1]_AND_55_o|         |    5.114|         |         |
+obstacle1/rst_obstacle_time[2]_AND_53_o|         |    5.444|         |         |
+obstacle1/rst_obstacle_time[3]_AND_51_o|         |    5.318|         |         |
+obstacle1/rst_obstacle_time[4]_AND_49_o|         |    5.216|         |         |
+obstacle1/rst_obstacle_time[5]_AND_47_o|         |    5.342|         |         |
+obstacle1/rst_obstacle_time[6]_AND_45_o|         |    5.216|         |         |
+obstacle2/rst_PWR_11_o_AND_68_o        |         |    5.833|         |         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.438|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obstacle1/rst_GND_9_o_AND_27_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cactus_clk     |         |         |    3.084|         |
+clk            |         |         |    3.877|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obstacle1/rst_obstacle_time[0]_AND_57_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cactus_clk     |         |         |    2.582|         |
+clk            |         |         |    3.665|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obstacle1/rst_obstacle_time[1]_AND_55_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cactus_clk     |         |         |    2.582|         |
+clk            |         |         |    3.665|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obstacle1/rst_obstacle_time[2]_AND_53_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cactus_clk     |         |         |    2.501|         |
+clk            |         |         |    3.665|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obstacle1/rst_obstacle_time[3]_AND_51_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cactus_clk     |         |         |    2.528|         |
+clk            |         |         |    3.665|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obstacle1/rst_obstacle_time[4]_AND_49_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cactus_clk     |         |         |    2.501|         |
+clk            |         |         |    3.665|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obstacle1/rst_obstacle_time[5]_AND_47_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cactus_clk     |         |         |    2.501|         |
+clk            |         |         |    3.665|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obstacle1/rst_obstacle_time[6]_AND_45_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cactus_clk     |         |         |    2.501|         |
+clk            |         |         |    3.665|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obstacle2/rst_PWR_11_o_AND_68_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cactus_clk     |         |         |    3.071|         |
+clk            |         |         |    3.731|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.00 secs
+ 
+--> 
+
+Total memory usage is 263932 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  110 (   0 filtered)
+Number of infos    :   39 (   0 filtered)
+

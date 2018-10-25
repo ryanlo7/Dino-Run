@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/152/Documents/Downloads/proj-4-combo/proj-4-combo/NERP_demo/clockdiv.xst" -ofn "C:/Users/152/Documents/Downloads/proj-4-combo/proj-4-combo/NERP_demo/clockdiv.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 clockdiv.ngc clockdiv.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 clockdiv.ngc clockdiv.ngd  

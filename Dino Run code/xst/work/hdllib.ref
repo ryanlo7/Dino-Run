@@ -1,0 +1,4 @@
+MO vga640x480 NULL vga640x480.v vlg70/vga640x480.bin 1510861589
+MO NERP_demo_top NULL NERP_demo_top.v vlg13/_n_e_r_p__demo__top.bin 1510861589
+MO segdisplay NULL segdisplay.v vlg5D/segdisplay.bin 1510861589
+MO clockdiv NULL clockdiv.v vlg67/clockdiv.bin 1510861589
