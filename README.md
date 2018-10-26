@@ -3,3 +3,5 @@ Class project for Digital Design Lab that replicates the Google Chrome browser D
 
 Worked with Nicole Wong and Ramya Satish.  
 For more information and demonstrations of the project, please view the report.
+
+![alt text](https://github.com/ryanlo7/Dino-Run/blob/master/Dino%20Run%20code/trex-chrome-game.png "Dino Run Game Image")
